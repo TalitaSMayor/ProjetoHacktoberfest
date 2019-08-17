@@ -1,8 +1,170 @@
-﻿@{
+﻿@model IEnumerable<Graficos.Data.Dados>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row">
+    <div class="col-md-12" id="container">
+
+    </div>
 </div>
+<hr />
+<div class="row">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-4">
+
+
+        Data Inicial <div id="startDate"></div>
+
+    </div>
+    <div class="col-md-4">
+        Data Final
+        <div id="endDate"></div>
+
+    </div>
+    <div class="col-md-2">
+
+        <button class="btn btn-success btn-lg" id="AtualizarGrafico">ATUALIZAR GRÁFICO</button>
+
+    </div>
+</div>
+<hr />
+<div class="row">
+
+    <div class="col-md-4">
+
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <span class="success"></span>
+                </label>Bloco
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <span class="success"></span>
+                </label>Tratamentos
+            </li>
+          
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <span class="success"></span>
+                </label>Tempertura do solo
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <span class="success"></span>
+                </label>Temperatura da Superficie do solo
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <span class="success"></span>
+                </label>Temperatura da Copa
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <span class="success"></span>
+                </label>Diametro Coleto
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <span class="success"></span>
+                </label>Altura Planta
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <span class="success"></span>
+                </label>Numero de folhas
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+@section CSS{
+    <link href="~/Toggle/bootstrap-toggle.min.css" rel="stylesheet" />
+    <link href="~/datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" />
+    <link href="~/datepicker/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="~/ToggleF/toggleF.css" rel="stylesheet" />
+    <style>
+        .datepicker-inline {
+            border: 1px solid;
+        }
+
+        input[type=checkbox] {
+            margin-right: 10px;
+            border: 1px solid;
+        }
+    </style>
+}
+
+@section Scripts {
+
+    <script src="~/Toggle/bootstrap-toggle.min.js"></script>
+    <script src="~/datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="~/datepicker/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js">
+    </script>
+
+    <script type="text/javascript">
+        google.charts.load('current', { packages: ['corechart'] });
+    </script>
+
+    <script>
+        $("#startDate").datepicker({
+            language: "pt-BR"
+        }).on("changeDate", function () {
+            $('#endDate').datepicker("setStartDate", $("#startDate").datepicker("getDate"));
+
+        });
+        $("#endDate").datepicker({
+            language: "pt-BR"
+
+        });
+
+        $(document).ready(function () {
+
+
+        });
+    </script>
+
+    <script language="JavaScript">
+
+
+        function drawChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable([
+                ['', '1', '2', '3', '4'],
+                ['30/11/2018', 10, 12.5, 12.3, 11.9],
+                ['02/12/2018', 9, 11.7, 11.3, 14.8],
+                ['08/12/2018', 11, 10.5, 10.3, 12.7],
+                ['12/12/2018', 8, 9.5, 09.3, 10.9],
+            ]);
+
+            var options = { title: 'Analise de informações' };
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.ColumnChart(document.getElementById('container'));
+            chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChart);
+    </script>
+}

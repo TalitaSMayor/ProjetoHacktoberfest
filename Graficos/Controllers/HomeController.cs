@@ -12,7 +12,9 @@ namespace Graficos.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            Contexto db = new Contexto();
+            
+            return View(db.DADOS.ToList());
         }
 
         public IActionResult Privacy()
