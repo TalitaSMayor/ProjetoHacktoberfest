@@ -16,11 +16,12 @@
 
 
         Data Inicial <div id="startDate"></div>
-
+        <input type="hidden" value="" id="inputStartDate" name="startDate" />
     </div>
     <div class="col-md-4">
         Data Final
         <div id="endDate"></div>
+        <input type="hidden" value="" id="inputEndDate" name="endDate" />
 
     </div>
     <div class="col-md-2">
@@ -38,61 +39,177 @@
         <ul class="list-group">
             <li class="list-group-item">
                 <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="TodosBlocos" id="SelecionaTodosBlocos" checked="checked" data-SelectAll="true" />
                     <span class="success"></span>
-                </label>Bloco
+                </label><span id="textoSelecionaBloco">Desmarcar Todos</span>
+</li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="bloco1" class="checkBlocos" checked="checked" />
+                    <span class="success"></span>
+                </label>Bloco 1
             </li>
             <li class="list-group-item">
                 <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="bloco2" class="checkBlocos" checked="checked" />
                     <span class="success"></span>
-                </label>Tratamentos
+                </label>Bloco 2
             </li>
-          
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="bloco3" class="checkBlocos" checked="checked" />
+                    <span class="success"></span>
+                </label>Bloco 3
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="bloco4" class="checkBlocos" checked="checked" />
+                    <span class="success"></span>
+                </label>Bloco 4
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="bloco5" class="checkBlocos" checked="checked" />
+                    <span class="success"></span>
+                </label>Bloco 5
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="bloco6" class="checkBlocos" checked="checked" />
+                    <span class="success"></span>
+                </label>Bloco 6
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="bloco7" class="checkBlocos" checked="checked" />
+                    <span class="success"></span>
+                </label>Bloco 7
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="bloco8" class="checkBlocos" checked="checked" />
+                    <span class="success"></span>
+                </label>Bloco 8
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="bloco9" class="checkBlocos" checked="checked" />
+                    <span class="success"></span>
+                </label>Bloco 9
+            </li>
+
         </ul>
     </div>
     <div class="col-md-4">
         <ul class="list-group">
             <li class="list-group-item">
                 <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="TodosTratamento" id="SelecionaTodosTratamentos" checked="checked" />
+                    <span class="success"></span>
+                </label><span id="textoSelecionaTratamento">Desmarcar Todos</span>
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="tratamento1" class="checkTratamento" checked="checked" />
+                    <span class="success"></span>
+                </label>Tratamento 1
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="tratamento2" class="checkTratamento" checked="checked" />
+                    <span class="success"></span>
+                </label>Tratamento 2
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="tratamento3" class="checkTratamento" checked="checked" />
+                    <span class="success"></span>
+                </label>Tratamento 3
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="tratamento4" class="checkTratamento" checked="checked" />
+                    <span class="success"></span>
+                </label>Tratamento 4
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="tratamento5" class="checkTratamento" checked="checked" />
+                    <span class="success"></span>
+                </label>Tratamento 5
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="tratamento6" class="checkTratamento" checked="checked" />
+                    <span class="success"></span>
+                </label>Tratamento 6
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="tratamento7" class="checkTratamento" checked="checked" />
+                    <span class="success"></span>
+                </label>Tratamento 7
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="tratamento8" class="checkTratamento" checked="checked" />
+                    <span class="success"></span>
+                </label>Tratamento 8
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="tratamento9" class="checkTratamento" checked="checked" />
+                    <span class="success"></span>
+                </label>Tratamento 9
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="TodosDados" id="SelecionaTodosDados" checked="checked" />
+                    <span class="success"></span>
+                </label><span id="textoSelecionaDados">Desmarcar Todos</span>
+            </li>
+            <li class="list-group-item">
+                <label class="checkbox">
+                    <input type="checkbox" name="dados1" class="checkDados" checked="checked" />
                     <span class="success"></span>
                 </label>Tempertura do solo
             </li>
             <li class="list-group-item">
                 <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="dados2" class="checkDados" checked="checked" />
                     <span class="success"></span>
                 </label>Temperatura da Superficie do solo
             </li>
             <li class="list-group-item">
                 <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="dados3" class="checkDados" checked="checked" />
                     <span class="success"></span>
                 </label>Temperatura da Copa
             </li>
-        </ul>
-    </div>
-    <div class="col-md-4">
-        <ul class="list-group">
+
             <li class="list-group-item">
                 <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="dados4" class="checkDados" checked="checked" />
                     <span class="success"></span>
                 </label>Diametro Coleto
             </li>
             <li class="list-group-item">
                 <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="dados5" class="checkDados" checked="checked" />
                     <span class="success"></span>
                 </label>Altura Planta
             </li>
             <li class="list-group-item">
                 <label class="checkbox">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="dados6" class="checkDados" checked="checked" />
                     <span class="success"></span>
                 </label>Numero de folhas
             </li>
+
         </ul>
     </div>
 
@@ -123,20 +240,26 @@
     <script src="~/datepicker/locales/bootstrap-datepicker.pt-BR.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js">
     </script>
-
     <script type="text/javascript">
         google.charts.load('current', { packages: ['corechart'] });
     </script>
-
     <script>
         $("#startDate").datepicker({
             language: "pt-BR"
         }).on("changeDate", function () {
-            $('#endDate').datepicker("setStartDate", $("#startDate").datepicker("getDate"));
+            if ($("#startDate").datepicker("getDate") > $("#endDate").datepicker("getDate")) {
+                $('#inputEndDate').val("");
+            }
 
+            $('#endDate').datepicker("setStartDate", $("#startDate").datepicker("getDate"));
+            $('#inputStartDate').val($(this).datepicker("getDate").toLocaleDateString());
+           
         });
         $("#endDate").datepicker({
             language: "pt-BR"
+
+        }).on("changeDate", function () {
+            $('#inputEndDate').val($(this).datepicker("getDate").toLocaleDateString() );
 
         });
 
@@ -144,6 +267,55 @@
 
 
         });
+
+        $("#AtualizarGrafico").click(function () {
+            var favorite = [];
+            $.each($("input[type='checkbox']:checked"), function () {
+              
+                favorite.push( $(this).attr("name") );
+            });
+            console.log(favorite);
+
+            console.log($("#inputStartDate").val() + "   " + $("#inputEndDate").val());
+
+        });
+
+        $("#SelecionaTodosDados").click(function () {
+            if ($(this).data("SelectAll") == "true") {
+                $(this).data("SelectAll", "false");
+              
+                $(".checkDados").prop("checked", true);
+                $("#textoSelecionaDados").text("Desmarcar Todos");
+            } else {
+                $(this).data("SelectAll", "true");
+                $("#textoSelecionaDados").text("Marcar Todos");
+                $(".checkDados").prop("checked", false);
+            }
+        });
+        $("#SelecionaTodosTratamentos").click(function () {
+            if ($(this).data("SelectAll") == "true") {
+                $(this).data("SelectAll", "false");
+                $(".checkTratamento").prop("checked", true);
+                $("#textoSelecionaTratamento").text("Desmarcar Todos");
+            } else {
+                $(this).data("SelectAll", "true");
+                $(".checkTratamento").prop("checked", false);
+                $("#textoSelecionaTratamento").text("Marcar Todos");
+            }
+        });
+        $("#SelecionaTodosBlocos").click(function () {
+            if ($(this).data("SelectAll") == "true") {
+                $(this).data("SelectAll", "false");
+                $(".checkBlocos").prop("checked", true);
+                $("#textoSelecionaBloco").text("Desmarcar Todos");
+            } else {
+                $(this).data("SelectAll", "true");
+               
+                $("#textoSelecionaBloco").text("Marcar Todos");
+                $(".checkBlocos").prop("checked", false);
+            }
+        });
+
     </script>
 
     <script language="JavaScript">
