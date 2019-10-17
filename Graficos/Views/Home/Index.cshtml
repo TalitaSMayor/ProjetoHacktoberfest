@@ -10,16 +10,14 @@
 </div>
 <hr />
 <div class="row">
-    <div class="col-md-2"></div>
-
-    <div class="col-md-4">
+    <div class="col-md-4 offset-md-2">
 
 
-        Data Inicial <div id="startDate"></div>
+        <label for="startDate">Data Inicial</label> <div id="startDate"></div>
         <input type="hidden" value="" id="inputStartDate" name="startDate" />
     </div>
     <div class="col-md-4">
-        Data Final
+        <label for="endDate">Data Final</label>
         <div id="endDate"></div>
         <input type="hidden" value="" id="inputEndDate" name="endDate" />
 
@@ -42,7 +40,7 @@
                     <input type="checkbox" name="TodosBlocos" id="SelecionaTodosBlocos" checked="checked" data-SelectAll="true" />
                     <span class="success"></span>
                 </label><span id="textoSelecionaBloco">Desmarcar Todos</span>
-</li>
+            </li>
             <li class="list-group-item">
                 <label class="checkbox">
                     <input type="checkbox" name="bloco1" class="checkBlocos" checked="checked" />
